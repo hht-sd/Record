@@ -1,6 +1,6 @@
 # 清除浮动的几种方式 #  
 
-[代码示例](https://github.com/hhtrookie/recordGit/tree/master/record/clear.html)  
+[代码示例](https://hhtrookie.github.io/Record/clearFix.html)  
 
 1. 
     > 方法一：添加一个元素 clear:both  
