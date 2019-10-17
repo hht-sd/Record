@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="outer over-flow">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>
+        方法一：添加一个元素 clear:both
+        <br>
+
+        <!-- <div class="clear"></div>  //添加一个元素 clear:both   -->
+        <!-- <p style="clear:both"></p> //空标签 -->
+        方法二：给父元素添加over-flow:auto;zoom:1;zoom兼容IE6;自适应高度;或者over-flow:hidden;
+        <br> 方法三：其中clear:both;指清除所有浮动；content: '.'; display:block;
+    </div>
+</body>
+
+</html>
+<style>
+    .outer {
+        padding: 50px;
+        background: rgb(248, 209, 209);
+    }
+    
+    .outer::after {
+        clear: both;
+        display: block;
+        content: "";
+    }
+    
+    .div1 {
+        float: left;
+        width: 100px;
+        height: 150px;
+        background: red;
+    }
+    
+    .div2 {
+        float: left;
+        width: 100px;
+        height: 150px;
+        background: yellow;
+    }
+    
+    .div3 {
+        float: left;
+        width: 100px;
+        height: 150px;
+        background: blueviolet;
+    }
+    
+    .clear {
+        clear: both;
+    }
+    /* .over-flow {
+        overflow: auto;
+        zoom: 1;
+    } */
+    
+    </style
