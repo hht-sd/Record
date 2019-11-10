@@ -77,11 +77,11 @@ html() - 设置或返回所选元素的内容,包括HTML标签
 val() - 设置或返回表单字段的值
 
 attr - 获取属性;// JS可以对象获取;getAttrtibute();setAttribute('属性',value)
-设置多个属性
-attr({
+设置多个属性  
+attr({  
     "href" : "http://www.w3school.com.cn/jquery",
     "title" : "W3School jQuery Tutorial"
-});
+});  
 
 添加方法  --html标签
 append() - 在被选元素的结尾插入内容
@@ -101,53 +101,53 @@ toggleClass() - 对被选元素进行添加/删除类的切换操作  //等价ad
 css() - 设置或返回样式属性
 
 尺寸
-width:宽度
-height:高度
-innerWidth:width + padding;
-innerHeight:height + padding;
-outerWidth:width + padding + border;
-outerHeight:height + padding +border;
+width:宽度  
+height:高度  
+innerWidth:width + padding;  
+innerHeight:height + padding;  
+outerWidth:width + padding + border;  
+outerHeight:height + padding +border;  
 
 ### 遍历元素 ###
-parent() 返回每个元素的上一级父元素;
-parents() 返回每个元素的所有父级元素; //parents(args)元素过滤,元素作为参数;
+parent() 返回每个元素的上一级父元素;  
+parents() 返回每个元素的所有父级元素; //parents(args)元素过滤,元素作为参数;  
 parentsUntil() 返回两个给定元素之间的元素;//eg:('span').parentsUntil('div'); span与div之间的元素;
 
-children() 返回元素的下一级子元素; // 存在过滤参数
-find(arg) 返回所选元素中的下级元素,arg必填;// 选中所有子元素为find('*'); 
+children() 返回元素的下一级子元素; // 存在过滤参数  
+find(arg) 返回所选元素中的下级元素,arg必填;// 选中所有子元素为find('*');   
 
-siblings() 返回所选元素的所有同胞元素;//过滤参数
-next() 返回所选元素的下一个同胞元素  ---prev()
-nextAll() 返回所选元素         ----prevAll()
-nextUntil 返回两个元素之间的同胞元素    ----prevUntil()
+siblings() 返回所选元素的所有同胞元素;//过滤参数  
+next() 返回所选元素的下一个同胞元素  ---prev()  
+nextAll() 返回所选元素         ----prevAll()  
+nextUntil 返回两个元素之间的同胞元素    ----prevUntil()  
 
-first() 返回被选元素的首个元素 --等价于[0];eg.$("div p").first();首个div元素内部首个p元素;
-last() 返回被选元素的最后一个元素 --同上
-eq(index) 返回被选元素中带有指定索引号的元素;
+first() 返回被选元素的首个元素 --等价于[0];eg.$("div p").first();首个div元素内部首个p元素;  
+last() 返回被选元素的最后一个元素 --同上  
+eq(index) 返回被选元素中带有指定索引号的元素;  
 
-filter 返回符合匹配标准的元素;filter('*'),返回所有元素
-not() 与filter相反;
+filter 返回符合匹配标准的元素;filter('*'),返回所有元素  
+not() 与filter相反;  
 
 ### AJAX ###
 在不重载整个网页的情况下,AJAX通过后台加载数据,并在网页上显示.
 
-load(URL,data,callback); 从服务器加载数据;
-load("demo_test.txt",function(responseTxt,statusTxt,xhr){})
+load(URL,data,callback); 从服务器加载数据;  
+load("demo_test.txt",function(responseTxt,statusTxt,xhr){})  
 
-$.get(url,callback)
-$.post(url,data,callback)  
-//
-eg.$.post("demo_test_post.asp",
-  {
-    name:"Donald Duck",
-    city:"Duckburg"
-  },
-  function(data,status){
-    alert("Data: " + data + "\nStatus: " + status);
-  });
-
-  $.noConflict(); //释放$标识符的控制
-  var jq = $.noConflict(); //返回对jQuery的引用
+$.get(url,callback)  
+$.post(url,data,callback)    
+//  
+eg.$.post("demo_test_post.asp",    
+  {  
+    name:"Donald Duck",  
+    city:"Duckburg"  
+  },   
+  function(data,status){  
+    alert("Data: " + data + "\nStatus: " + status);  
+  });  
+  
+  $.noConflict(); //释放$标识符的控制  
+  var jq = $.noConflict(); //返回对jQuery的引用  
 
 
 
